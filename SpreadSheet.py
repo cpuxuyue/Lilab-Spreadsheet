@@ -1,12 +1,8 @@
 import streamlit as st
 import pandas as pd
 
-# 设置页面标题
-st.set_page_config(page_title="LNP", layout="wide")
+st. title ("LNP formulation calculator")
 
-# 创建侧边栏导航
-st.sidebar.title("LNP")
-page = st.sidebar.radio("LNP", ["LNP1", "LNP2", "LNP3"])
 
 
 
