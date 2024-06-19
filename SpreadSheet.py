@@ -8,19 +8,6 @@ st.set_page_config(page_title="LNP", layout="wide")
 st.sidebar.title("LNP")
 page = st.sidebar.radio("LNP", ["LNP1", "LNP2", "LNP3"])
 
-def show():
-    st.title("LNP")
-# 根据选择的页面加载相应的内容
-    if page == "LNP1":
-        import SpreadSheet
-        SpreadSheet.show()
-    elif page == "LNP2":
-        import page1
-        page1.show()
-    elif page == "LNP3":
-        import page2
-        page2.show()
-
 
 
 
