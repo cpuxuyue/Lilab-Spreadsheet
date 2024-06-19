@@ -1,7 +1,9 @@
 import streamlit as st
 import pandas as pd
-def show():
-    st.title("LNP")
+# Set the layout to wide
+st.set_page_config(layout="wide")
+st. title ("LNP formulation calculator 3")
+
 def make_lnp_formulation(rna_scale, rna_stock_concentration, ionizable_lipid_to_rna_ratio, aqueous_to_ethanol_ratio, ionizable_lipid_mw, helper_lipid_mw, cholesterol_mw, pegdmg2000_mw, ionizable_lipid_concentration, helper_lipid_concentration, cholesterol_concentration, pegdmg2000_concentration, ionizable_lipid_ratio, helper_lipid_ratio, cholesterol_ratio, pegdmg2000_ratio):
     """
     Calculates the composition and prepares an LNP formulation.
@@ -87,9 +89,6 @@ def prepare_bulk_lnp_volumes(volumes, times):
     return bulk_df
 
 def main():
-    st.set_page_config(page_title="LNP Formulation", layout="wide")
-    
-    st.title('LNP Formulation Calculator - Li Lab')
 
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -187,3 +186,6 @@ def main():
                     value=st.session_state.checkboxes_col4[index],
                     key=f"col4_{index}"
                 )
+
+if __name__ == "__main__":
+    main()
