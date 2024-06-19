@@ -1,29 +1,7 @@
 import streamlit as st
 import pandas as pd
-
-# 设置页面标题
-st.set_page_config(page_title="LNP", layout="wide")
-
-# 创建侧边栏导航
-st.sidebar.title("LNP")
-page = st.sidebar.radio("LNP", ["LNP1", "LNP2", "LNP3"])
-
 def show():
     st.title("LNP")
-# 根据选择的页面加载相应的内容
-    if page == "LNP1":
-        import SpreadSheet
-        SpreadSheet.show()
-    elif page == "LNP2":
-        import page1
-        page1.show()
-    elif page == "LNP3":
-        import page2
-        page2.show()
-
-
-
-
 def make_lnp_formulation(rna_scale, rna_stock_concentration, ionizable_lipid_to_rna_ratio, aqueous_to_ethanol_ratio, ionizable_lipid_mw, helper_lipid_mw, cholesterol_mw, pegdmg2000_mw, ionizable_lipid_concentration, helper_lipid_concentration, cholesterol_concentration, pegdmg2000_concentration, ionizable_lipid_ratio, helper_lipid_ratio, cholesterol_ratio, pegdmg2000_ratio):
     """
     Calculates the composition and prepares an LNP formulation.
@@ -109,6 +87,9 @@ def prepare_bulk_lnp_volumes(volumes, times):
     return bulk_df
 
 def main():
+    st.set_page_config(page_title="LNP Formulation", layout="wide")
+    
+    st.title('LNP Formulation Calculator - Li Lab')
 
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -206,7 +187,3 @@ def main():
                     value=st.session_state.checkboxes_col4[index],
                     key=f"col4_{index}"
                 )
-
-if __name__ == "__main__":
-    main()
-
