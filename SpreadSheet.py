@@ -44,10 +44,10 @@ def make_lnp_formulation(rna_scale, rna_stock_concentration, ionizable_lipid_to_
 
     data = {
         "Component": ["Ionizable Lipid", "Helper Lipid", "Cholesterol", "PEG-DMG2000", "Ethanol Phase", "Aqueous Phase", "Citrate", "Water", "Final LNP Volume", "Final RNA Concentration"],
-        "Moles": [f"{ionizable_lipid_moles:.2f}", f"{helper_lipid_moles:.2f}", f"{cholesterol_moles:.2f}", f"{pegdmg2000_moles:.2f}", "", "", "", "", "", ""],
-        "Mass (μg)": [f"{ionizable_lipid_mass:.2f}", f"{helper_lipid_mass:.2f}", f"{cholesterol_mass:.2f}", f"{pegdmg2000_mass:.2f}", "", "", "", "", "", ""],
         "Volume (μL)": [f"{ionizable_lipid_volume:.2f}", f"{helper_lipid_volume:.2f}", f"{cholesterol_volume:.2f}", f"{pegdmg2000_volume:.2f}", f"{ethanol_phase_volume:.2f}", f"{aqueous_phase_volume:.2f}", f"{citrate_volume:.2f}", f"{water_volume:.2f}", f"{final_lnp_volume:.2f}", ""],
-        "Concentration (μg/μL)": ["", "", "", "", "", "", "", "", "", f"{final_rna_concentration:.2f}"]
+        "Moles (μmol)": [f"{ionizable_lipid_moles:.2f}", f"{helper_lipid_moles:.2f}", f"{cholesterol_moles:.2f}", f"{pegdmg2000_moles:.2f}", "", "", "", "", "", ""],
+        "Mass (μg)": [f"{ionizable_lipid_mass:.2f}", f"{helper_lipid_mass:.2f}", f"{cholesterol_mass:.2f}", f"{pegdmg2000_mass:.2f}", "", "", "", "", "", ""],
+        "Concentration (μg/μL)": ["", "", "", "", "", "", "", "", "", f"{final_rna_concentration:.2f}"],
     }
     volumes = {
         "ionizable_lipid_volume": ionizable_lipid_volume,
