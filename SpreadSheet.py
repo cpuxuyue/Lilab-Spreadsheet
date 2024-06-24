@@ -45,7 +45,7 @@ def make_lnp_formulation(rna_scale, rna_stock_concentration, ionizable_lipid_to_
     # Create DataFrame for the results
     data = {
         'Component': ['Ionizable Lipid', 'Helper Lipid', 'Cholesterol', 'PEG-DMG2000', 'Ethanol', 'RNA', 'Citrate', 'Water'],
-        'Volume (mL)': [ionizable_lipid_volume, helper_lipid_volume, cholesterol_volume, pegdmg2000_volume, ethanol, rna_volume, citrate_volume, water_volume]
+        'Volume (μL)': [ionizable_lipid_volume, helper_lipid_volume, cholesterol_volume, pegdmg2000_volume, ethanol, rna_volume, citrate_volume, water_volume]
     }
 
     df = pd.DataFrame(data)
